@@ -1,13 +1,17 @@
 #!/bin/bash
 
-#conda install -c conda-forge librosa -y
-#
+# Need to install librosa via conda to get the pre-packaged sound library files.
+conda install -c conda-forge librosa -y
 pip install --upgrade pip
+
+# Deps for webrtcVAD and for preprocessing the audio.
+pip install webrtcvad scipy audiosegment
+
+# Stuff required by jp_proxy_widget
 pip install --upgrade ipywidgets
 jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
 pip install jp_proxy_widget
-#pip install jp_proxy_widget webrtcvad scipy audiosegment
 
 jupyter nbextension install --py --symlink --sys-prefix jp_proxy_widget
 jupyter nbextension enable --py --sys-prefix jp_proxy_widget
