@@ -15,4 +15,3 @@ pip install jp_proxy_widget
 
 jupyter nbextension install --py --symlink --sys-prefix jp_proxy_widget
 jupyter nbextension enable --py --sys-prefix jp_proxy_widget
-jupyter notebook --NotebookApp.websocket_compression_options={}
